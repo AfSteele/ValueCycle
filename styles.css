@@ -85,7 +85,7 @@ body {
 }
 
 .navbar a:hover::after {
-    width: 100%;
+    font-weight: bolder;
 }
 
 .navbar .nav-links li {
