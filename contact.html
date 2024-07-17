@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Value Cycle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar" class="navbar">
+        <div class="logo">
+            <img src="assets/brand.png" alt="Value Cycle">
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html" class="home">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="leadership.html">Leadership</a></li>
+                <li><a href="contact.html" class="contact">Contact</a></li>
+                <a href="https://prod.valuecycle.app/login" class="login-button">LOG IN</a>
+            </ul>
+        </div>
+        <button id="hamburger-toggle" class="hamburger">
+            <div class="icon-open">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M4 6l16 0" />
+                    <path d="M4 12l16 0" />
+                    <path d="M4 18l16 0" />
+                </svg>
+            </div>
+            <div class="icon-close">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M18 6l-12 12" />
+                    <path d="M6 6l12 12" />
+                </svg>
+            </div>
+        </button>
+    </nav>
+    <main>
+        <section>
+            <h1>Leave us a message!
+            </h1>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <!--need to add toms email into web3forms and then get access key-->
+                <input type="hidden" name="access_key" value="41b98d7a-a7d9-46f3-b933-3e016b641d92">
+                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+                <!-- Added labels for the form fields -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit Form</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 ValueCycle. All rights reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
