@@ -1,16 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburgerToggle = document.querySelector("#hamburger-toggle");
-    const navbar = document.querySelector("#navbar");
+function showSidebar() {
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display='flex'
+}
 
-    function handleHamburgerClick() {
-        navbar.classList.toggle("open");
-    }
-
-    // Add event listener
-    hamburgerToggle.addEventListener("click", handleHamburgerClick);
-});
-
-
+function hideSidebar() {
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display='none'
+}
 let slideIndex = 1;
 showSlides(slideIndex);
 

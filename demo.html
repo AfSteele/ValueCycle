@@ -5,42 +5,272 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Value Cycle</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .demo-header {
+            text-align: center;
+            font-size: 2em;
+        }
+
+        .arrow-text-section {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            flex-wrap: wrap; 
+        }
+
+        .arrow-container {
+            flex: 1;
+            max-width: 40%;
+            margin-right: 10px;
+        }
+
+        .arrow-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .text-box {
+            flex: 1;
+            margin: auto;
+            max-width: 40%;
+            padding: 20px;
+            
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            background: #fff; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+    
+        .text-box h1 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+        }
+    
+        .contact-form .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+    
+        .contact-form .form-row > div {
+            flex: 1 1 48%;
+        }
+    
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+    
+        .contact-form button {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .preferred-contact {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .preferred-contact p {
+            margin: 0;
+            margin-right: 20px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .contact-form .question-label {
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .button-wrapper {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .request-demo-button {
+            display: inline-block;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .request-demo-button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 767px) {
+            .arrow-text-section {
+                flex-direction: column;
+            }
+
+            .arrow-container, .text-box {
+                max-width: 100%;
+            }
+
+            .text-box {
+                margin: 20px 0;
+            }
+        }
+        
+    </style>
 </head>
 <body>
-    <nav id="navbar" class="navbar">
-        <div class="logo">
-           <a href ="index.html"> <img src="assets/brand.png" alt="Value Cycle"></a>
-        </div>
-        <div class="nav-links">
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="demo.html">Request a Demo</a></li>
-                <a href="https://prod.valuecycle.app/login" class="login-button">Log In</a>
-            </ul>
-        </div>
-        <button id="hamburger-toggle" class="hamburger">
-            <div class="icon-open">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M4 6l16 0" />
-                    <path d="M4 12l16 0" />
-                    <path d="M4 18l16 0" />
-                </svg>
+    <nav id="sidebar-navbar" class="sidebar">
+    <div class="nav-links">
+        <ul>
+            <li class = "close-button" onclick = hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="demo.html">Request a Demo</a></li>
+            <li><a href="https://prod.valuecycle.app/login" class="login-button">Log In</a></li>
+        </ul>
+    </div>
+    
+</nav>
+<nav id="navbar" class="navbar">
+<div class="nav-links">
+    <ul>
+        <li><img src="assets/brand.png"></li>
+        <li class = "hideOnMobile"><a href="about.html">About</a></li>
+        <li class = "hideOnMobile"><a href="demo.html">Request a Demo</a></li>
+        <li><a  class = "hideOnMobile login-button href="https://prod.valuecycle.app/login" >Log In</a></li>
+        <li class = "menu-button" onclick=showSidebar()><a href="#"> 
+            <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+</div>
+</nav>
+    <main>
+        <section class="arrow-text-section">
+            <div class="arrow-container">
+                <img src="assets/arrow.svg" alt="Arrow">
             </div>
-            <div class="icon-close">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M18 6l-12 12" />
-                    <path d="M6 6l12 12" />
-                </svg>
+            <div class="text-box">
+                <h1 class="demo-header">Request a Demo</h1>
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                    <input type="hidden" name="access_key" value="41b98d7a-a7d9-46f3-b933-3e016b641d92">
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                    
+                    <div class="form-row">
+                        <div>
+                            <label for="first-name">First Name*</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
+                        <div>
+                            <label for="last-name">Last Name*</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+                    </div>
+                    
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" required>
+                    
+                    <div class="form-row">
+                        <div>
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div>
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="preferred-contact">
+                        <p>Preferred contact method:</p>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="contact-method" value="phone"> Phone</label>
+                            <label><input type="checkbox" name="contact-method" value="email"> Email</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="ma-lives" class="question-label">How many attributed Medicare Advantage (MA) lives do you currently support in value-based care (VBC) contracts?</label>
+                        <input type="number" id="ma-lives" name="ma-lives" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div>
+                            <label for="ehr">What is your primary ambulatory EHR?</label>
+                            <select id="ehr" name="ehr" required>
+                                <option value="" disabled selected>Select an EHR</option>
+                                <option value="ehr1">Epic</option>
+                                <option value="ehr2">Cerner Millenium</option>
+                                <option value="ehr3">Cerner Community Works</option>
+                                <option value="ehr4">Athena</option>
+                                <option value="ehr5">Allscripts</option>
+                                <option value="ehr6">Meditech</option>
+                                <option value="ehr7">eCW</option>
+                                <option value="ehr8">Other (Let us know in the message!)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                    </div>          
+                    <div class="button-wrapper">
+                        <button type="submit" class="request-demo-button">Request a Demo</button>
+                    </div>
+                </form>   
             </div>
-        </button>
-    </nav>
-  <main>
-    <section>
-        <h1>Sorry! This page is under construction!</h1>
-    </section>
-  </main>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2024 ValueCycle. All rights reserved.</p>
     </footer>
