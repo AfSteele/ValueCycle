@@ -331,10 +331,46 @@
             box-sizing: border-box; 
         }
 
-        /* Adjustments for the Mary Image */
         .mary-image {
             max-width: 100%; 
             height: auto; 
+            cursor: pointer; /* Add cursor pointer to indicate clickable image */
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            margin: 5% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+            max-width: 1000px;
+            background-color: #fefefe;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
         }
 
         /* Responsive Design for Smaller Screens */
@@ -439,8 +475,16 @@
                 </div>
             </section>
             <section class="mary-infographic">
-                <img src="assets/mary.png" alt="Mary Infographic" class="mary-image">
+                <img src="assets/mary.png" alt="Mary Infographic" class="mary-image" id="maryImg">
             </section>
+        
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img src="assets/mary.png" alt="Mary Infographic" class="mary-image">
+                </div>
+            </div>
         </div>
     </main>
     <footer>
