@@ -25,11 +25,9 @@
             border-radius: 8px;
         }
 
-        .left-section, .middle-section {
-            margin-right: 0px;
-        }
-
+       
         .left-section img {
+            margin-top: 40px;
             width: 100%;
             height: auto;
         }
@@ -38,44 +36,33 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center; /* Center vertically */
-            text-align: center; /* Center text horizontally */
+            justify-content: center; 
+            text-align: center; 
             margin-top: 60px;
+            margin: 20px;
         }
-
-        .middle-section h2 {
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-        .middle-section p {
-            text-align: justify;
-        }
-
+        
         .ceo-section {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center horizontally */
+            align-items: center; 
             margin-bottom: 20px;
         }
 
         .ceo-section img {
-            width: 150px; /* Adjust size as needed */
-            height: 150px;
-            border-radius: 50%; /* Ensures round shape */
+            width: 250px; 
+            height: 250px;
+            border-radius: 50%; 
             object-fit: cover;
             margin-bottom: 10px;
         }
 
-        .ceo-section p {
-            margin: 5px 0; /* Adjust margin as needed */
-        }
 
         .company-images {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px; /* Gap between images */
+            gap: 20px; 
             padding: 20px;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -85,21 +72,34 @@
         }
 
         .company-images img {
-            width: auto; /* Adjust size as needed */
+            width: auto; 
             height: auto;
             margin-bottom: 20px;
         }
 
         .right-section {
             padding: 20px;
-            margin-right: 60px;
-            background: #ffffff; /* Lighter background for contrast */
+            background: #ffffff;
+            min-height: 300px; /* Adjust height based on expected content */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Keep space between content and bottom */
+        }
+
+        .right-section .placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 90px;
+            height: 100%; /* Ensure the placeholder takes up the full height */
+            color: #999;
+            font-style: italic;
+            text-align: center;
         }
 
         .right-section h1 {
             font-size: 2.5em;
-            margin-top: 0;
-            margin-bottom: 20px;
+            margin: 10px;
             text-align: left;
         }
 
@@ -107,7 +107,6 @@
             margin: 10px;
 
         }
-
 
         .right-section .center {
             text-align: center;
@@ -120,16 +119,16 @@
 
             .left-section, .right-section, .middle-section {
                 margin-bottom: 20px;
-                margin: 20px auto; /* Center the sections horizontally */
+                margin: 20px auto; 
                 max-width: 100%;
             }
 
             .left-section {
-                display: none; /* Hide left section on smaller screens */
+                display: none; 
             }
 
             .company-images {
-                flex-direction: column; /* Stack images vertically */
+                flex-direction: column; 
                 justify-content: center;
                 width: 100%; 
                 padding-left: 60px;
@@ -155,7 +154,7 @@
     <ul>
         <li><a href="index.html"><img src="assets/brand.png"></a></li>
         <li class = "hideOnMobile"><a href="about.html">About</a></li>
-        <li  class = "hideOnMobile"><a href="demo.html">Request a demo</a></li>
+        <li  class = "hideOnMobile demo"><a href="demo.html">Request a Demo</a></li>
         <li  class = "hideOnMobile"><a href="https://prod.valuecycle.app/login" class="login-button">Log In</a></li>
         <li class ="menu-button" onclick = showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
     </ul>
@@ -180,7 +179,10 @@
             </div>
             <div class="right-section">
                 <h1>Leading the Way</h1>
-                <p class="center"><i>ValueCycle is a joint venture between Abundant Venture Partners, Oak Street Health, First Trust Capital Partners, and 121G.</i></p>
+                <div class="placeholder">
+                    <p>Content coming soon...</p>
+                </div>
+                <p class=""><i>ValueCycle is a joint venture between Abundant Venture Partners, Oak Street Health, First Trust Capital Partners, and 121G.</i></p>
                 <p>Oak Street Health’s Revenue Cycle Management team realized there was a gap between the HCC codes captured in clinical documentation and what was represented on return files from payers. OSH began the process of identifying, reconciling, and recovering value-based payments across multiple systems and payor contracts, which required significant time and resources when done manually. Over the course of 5+ years, Oak Street developed an Excel-based solution that delivered strong results for their internal revenue cycle operations, and the team believed greater efficiency could be achieved if incorporated into a software solution. OSH, Abundant Venture Partners, First Trust Capital Partners, and 121G collaborated on the product development for ValueCycle.</p>
             </div>
         </section>

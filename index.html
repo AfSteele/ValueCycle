@@ -6,6 +6,18 @@
     <title>Value Cycle</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+
+        h2 {
+            font-size: 2.5em;
+            color: #000000;
+            margin-bottom: 30px;
+            margin-left: 40px;
+        }
+
+        p {
+            margin: 40px;
+        }
+        
         /* Quote Section Styles */
         .quote-section {
             background-color: white;
@@ -68,17 +80,6 @@
         }
 
 
-        h2 {
-            font-size: 2.5em;
-            color: #000000;
-            margin-bottom: 30px;
-            margin-left: 40px;
-        }
-
-        p {
-            margin: 40px;
-        }
-
         .reasons {
             position: relative;
             display: flex;
@@ -117,21 +118,33 @@
         }
 
         @media (max-width: 768px) {
+        .why-choose-us {
+            text-align: center; 
         
-            .number-circle {
-                width: 60px;
-                height: 60px;
-                font-size: 1.5em;
-            
-                justify-content: center;
-            }
-
-            .reasons {
-                padding: 20px; /* Adjust padding for smaller screens */
-                text-align: center; /* Center align the content */
-            }
         }
 
+        .reasons {
+        
+            align-items: center; 
+        }
+
+        .reason {
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center; 
+        }
+
+        .number-circle {
+            width: 60px; 
+            height: 60px; 
+            font-size: 1.5em; 
+            margin-bottom: 10px; 
+        }
+
+        .reason p {
+            font-size: 1em; 
+        }
+    }
 
         /* Half and Half Section Styles */
         .half-and-half {
@@ -357,7 +370,7 @@
         <ul>
             <li><a href="index.html"><img src="assets/logo.svg"></a></li>
             <li class = "hideOnMobile"><a href="about.html">About</a></li>
-            <li  class = "hideOnMobile"><a href="demo.html">Request a Demo</a></li>
+            <li  class = "hideOnMobile demo"><a href="demo.html">Request a Demo</a></li>
             <li  class = "hideOnMobile"><a href="https://prod.valuecycle.app/login" class="login-button">Log In</a></li>
             <li class ="menu-button" onclick = showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ede0df"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
         </ul>
