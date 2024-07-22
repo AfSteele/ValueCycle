@@ -14,7 +14,7 @@
         
         .demo-header {
             text-align: center;
-            font-size: 2em;
+            font-size: 2.5em;
         }
 
         .arrow-text-section {
@@ -150,13 +150,17 @@
             background-color: #0056b3;
         }
 
-        @media (max-width: 767px) {
+        @media (max-width: 1000px) {
             .arrow-text-section {
                 flex-direction: column;
             }
 
+            .arrow-container{
+                display: none;
+            }
+
             .arrow-container, .text-box {
-                max-width: 100%;
+                max-width: 80%;
             }
 
             .text-box {
@@ -168,9 +172,9 @@
 <body>
     <nav>
         <ul class="sidebar">
-            <li class="close-button"onclick = hideSidebar()><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li class="close-button"onclick = hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="demo.html">Request a demo</a></li>
+            <li><a href="demo.html">Request a Demo</a></li>
             <li> <a href="https://prod.valuecycle.app/login" class="login-button">Log In</a></li>
         </ul>
     </nav>
@@ -178,9 +182,9 @@
     <ul>
         <li><a href="index.html"><img src="assets/brand.png"></a></li>
         <li class = "hideOnMobile"><a href="about.html">About</a></li>
-        <li  class = "hideOnMobile"><a href="demo.html">Request a demo</a></li>
+        <li  class = "hideOnMobile demo"><a href="demo.html">Request a Demo</a></li>
         <li  class = "hideOnMobile"><a href="https://prod.valuecycle.app/login" class="login-button">Log In</a></li>
-        <li class ="menu-button" onclick = showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        <li class ="menu-button" onclick = showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
     </ul>
    </nav>
     <main>
@@ -263,6 +267,7 @@
         </section>
     </main>
     <footer>
+        <a href="privacy.html" class="blue-title">Privacy Policy</a>
         <p>&copy; 2024 ValueCycle. All rights reserved.</p>
     </footer>
     <script src="app.js"></script>
