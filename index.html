@@ -2,21 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="value_cycle.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Value Cycle</title>
     <link rel="stylesheet" href="styles.css">
     <style>
 
-        h2 {
-            font-size: 2.5em;
-            color: #000000;
-            margin-bottom: 30px;
-            margin-left: 40px;
-        }
-
-        p {
-            margin: 40px;
-        }
         
         /* Quote Section Styles */
         .quote-section {
@@ -118,33 +109,37 @@
         }
 
         @media (max-width: 768px) {
-        .why-choose-us {
-            text-align: center; 
-        
+            .why-choose-us {
+                text-align: center; 
+            
+            }
+
+            .reasons {
+            
+                align-items: center; 
+            }
+
+            .reason {
+                flex-direction: column; 
+                align-items: center; 
+                text-align: center; 
+            }
+
+            .number-circle {
+                width: 60px; 
+                height: 60px; 
+                font-size: 1.5em; 
+                margin-bottom: 10px; 
+            }
+
+            .reason p {
+                font-size: 1em; 
+            }
         }
 
-        .reasons {
-        
-            align-items: center; 
+        .case-study{
+            margin: 20px;
         }
-
-        .reason {
-            flex-direction: column; 
-            align-items: center; 
-            text-align: center; 
-        }
-
-        .number-circle {
-            width: 60px; 
-            height: 60px; 
-            font-size: 1.5em; 
-            margin-bottom: 10px; 
-        }
-
-        .reason p {
-            font-size: 1em; 
-        }
-    }
 
         /* Half and Half Section Styles */
         .half-and-half {
