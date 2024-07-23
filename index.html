@@ -8,7 +8,57 @@
     <link rel="stylesheet" href="styles.css">
     <style>
 
-        
+        /* Base styles for header */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('path-to-your-image.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+/* Header text styles */
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 70%; /* Responsive text block */
+    margin: 0 auto;
+}
+
+/* Responsive arrow image */
+.banner-arrow {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Optional: Additional adjustments for very small screens */
+@media (max-width: 850px) and (orientation: landscape) {
+    .header-container {
+        padding: 30px; /* Reduce padding on smaller screens */
+        min-height: 30vh; /* Ensure there's enough height */
+        font-size: 0.8em;
+    }
+
+    .header-text {
+        max-width: 80%; /* Max width adjustment for smaller screens */
+    }
+
+    .banner-arrow {
+        margin-top: 10px; /* Further adjust margin if needed */
+    }
+}
+
+
         /* Quote Section Styles */
         .quote-section {
             background-color: white;
@@ -96,7 +146,7 @@
             align-items: center;
             font-size: 2em; 
             font-weight: bold;
-            margin: 0 auto; /* Center the circle */
+            margin: 0 auto; 
             flex-shrink: 0; 
         }
 
@@ -109,11 +159,11 @@
         @media (max-width: 768px) {
             .why-choose-us {
                 text-align: center;
-                margin: 20px; /* Ensure there is some margin around the section */
-                padding: 0 20px; /* Add padding to prevent content from touching the edges */
+                margin: 20px; 
+                padding: 0 20px; 
             }
 
-            h2 { /* reset weird margin around the title*/
+            h2 { 
                 margin: 0;
                 margin-bottom: 20px;
             }
@@ -121,16 +171,16 @@
             .reasons {
                 display: flex;
                 flex-direction: column;
-                align-items: center; /* Center items horizontally */
-                gap: 20px; /* Space between reasons */
-                padding: 0; /* Remove any padding */
+                align-items: center; 
+                gap: 20px; 
+                padding: 0; 
             }
 
             .reason {
                 display: flex;
                 flex-direction: column;
-                align-items: center; /* Center items in the column */
-                text-align: center; /* Center text inside each reason */
+                align-items: center; 
+                text-align: center; 
             }
 
             .number-circle {
@@ -282,6 +332,11 @@
             margin-bottom: 1em; 
         }
 
+        .case-study p {
+            margin: 40px;
+            
+        }
+
         /* Media query for screen sizes 1000px or smaller */
         @media (max-width: 1000px) {
             .arrow-container {
@@ -347,27 +402,27 @@
         .mary-image {
             max-width: 100%; 
             height: auto; 
-            cursor: pointer; /* Add cursor pointer to indicate clickable image */
+            cursor: pointer; 
         }
 
         /* Modal Styles */
         .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+            overflow: auto; 
+            background-color: rgba(0, 0, 0, 0.8); 
         }
 
         .modal-content {
-            margin: 5% auto; /* 15% from the top and centered */
+            margin: 5% auto; 
             padding: 20px;
             border: 1px solid #888;
-            width: 80%; /* Could be more or less, depending on screen size */
+            width: 80%; 
             max-width: 1000px;
             background-color: #fefefe;
         }
