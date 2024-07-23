@@ -37,25 +37,3 @@ var modal = document.getElementById("myModal");
                 modal.style.display = "none";
             }
         }
-
-
-         // Modal script for Tom's image
-         var tomModal = document.getElementById("tomModal");
-         var tomImg = document.getElementById("tomImg");
-         var tomModalImg = tomModal.querySelector(".modal-image");
-         var span = tomModal.querySelector(".close");
- 
-         tomImg.onclick = function() {
-             tomModal.style.display = "block";
-             tomModalImg.src = this.src;
-         }
- 
-         span.onclick = function() {
-             tomModal.style.display = "none";
-         }
- 
-         window.onclick = function(event) {
-             if (event.target == tomModal) {
-                 tomModal.style.display = "none";
-             }
-         }
