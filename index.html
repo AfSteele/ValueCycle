@@ -62,8 +62,6 @@
         .why-choose-us {
             background-color: #ffffff;
             text-align: left;
-            margin: 20px;
-            margin-right: 60px;
         }
 
         .why-choose-us .reasons p {
@@ -83,7 +81,7 @@
         .reason {
             display: flex;
             align-items: center; 
-            padding-left: 20px; 
+           
             gap: 20px; 
         }
 
@@ -98,7 +96,7 @@
             align-items: center;
             font-size: 2em; 
             font-weight: bold;
-            margin-right: 20px;
+            margin: 0 auto; /* Center the circle */
             flex-shrink: 0; 
         }
 
@@ -110,19 +108,29 @@
 
         @media (max-width: 768px) {
             .why-choose-us {
-                text-align: center; 
-            
+                text-align: center;
+                margin: 20px; /* Ensure there is some margin around the section */
+                padding: 0 20px; /* Add padding to prevent content from touching the edges */
+            }
+
+            h2 { /* reset weird margin around the title*/
+                margin: 0;
+                margin-bottom: 20px;
             }
 
             .reasons {
-            
-                align-items: center; 
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Center items horizontally */
+                gap: 20px; /* Space between reasons */
+                padding: 0; /* Remove any padding */
             }
 
             .reason {
-                flex-direction: column; 
-                align-items: center; 
-                text-align: center; 
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Center items in the column */
+                text-align: center; /* Center text inside each reason */
             }
 
             .number-circle {
@@ -135,12 +143,17 @@
             .reason p {
                 font-size: 1em; 
             }
-        }
 
-        .case-study{
-            margin: 20px;
-        }
+            .case-study {
+                text-align: center;
+            }
 
+            .text-box {
+                text-align: center;
+            }
+}
+
+    
         /* Half and Half Section Styles */
         .half-and-half {
             display: flex;
@@ -391,7 +404,7 @@
     <div class="background">
         <nav>
             <ul class="sidebar">
-                <li class="close-button"onclick = hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li class="close-button"onclick = hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#00409C"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="demo.html">Request a demo</a></li>
                 <li> <a href="https://prod.valuecycle.app/login" class="login-button">Log In</a></li>
@@ -403,7 +416,7 @@
             <li class = "hideOnMobile"><a href="about.html">About</a></li>
             <li  class = "hideOnMobile demo"><a href="demo.html">Request a Demo</a></li>
             <li  class = "hideOnMobile"><a href="https://prod.valuecycle.app/login" class="login-button">Log In</a></li>
-            <li class ="menu-button" onclick = showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ede0df"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            <li class ="menu-button" onclick = showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#00409C"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
         </ul>
        </nav>
         <header class="header-container">
