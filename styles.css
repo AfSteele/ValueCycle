@@ -143,6 +143,8 @@
             margin-top: 10px;
             border-radius: 0;
         }
+       .sidebar li {
+          padding: 20px;
     }
 
     @media (max-width: 400px) {
