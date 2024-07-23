@@ -164,8 +164,6 @@
                 margin: 20px 0;
             }
         }
-
-
     </style>
 </head>
 <body>
@@ -193,21 +191,17 @@
             </div>
             <div class="text-box">
                 <h1 class="demo-header">Request a Demo</h1>
-                <form action="https://formsubmit.co/40de78dcb0160c6e797d5d3b6dde96a6" method="POST" class="contact-form">
-                   <!--Honey Pot-->
-                    <input type="text" name="_honey" style="display: none;">
-                    <!--Disable Captcha-->
-                    <input type="hidden" name="_captcha" value="false">
-
-                    <input type="hidden" name="_next" value="https://afsteele.github.io/ValueCycle/success.html">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                    <input type="hidden" name="access_key" value="41b98d7a-a7d9-46f3-b933-3e016b641d92">
+                    <input type="hidden" name="redirect" value="https://afsteele.github.io/ValueCycle/success.html">
                     <div class="form-row">
                         <div>
                             <label for="first-name">First Name*</label>
-                            <input type="text" id="first-name" name="First&nbsp;Name" required>
+                            <input type="text" id="first-name" name="first-name" required>
                         </div>
                         <div>
                             <label for="last-name">Last Name*</label>
-                            <input type="text" id="last-name" name="Last&nbsp;Name" required>
+                            <input type="text" id="last-name" name="last-name" required>
                         </div>
                     </div>
                     
@@ -217,31 +211,31 @@
                     <div class="form-row">
                         <div>
                             <label for="email">Email*</label>
-                            <input type="email" id="email" name="Email" required>
+                            <input type="email" id="email" name="email" required>
                         </div>
                         <div>
                             <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="Phone">
+                            <input type="tel" id="phone" name="phone">
                         </div>
                     </div>
                     
                     <div class="preferred-contact">
                         <p>Preferred contact method:</p>
                         <div class="checkbox-group">
-                            <label><input type="checkbox" name="Contact&nbsp;Method" value="phone"> Phone</label>
-                            <label><input type="checkbox" name="Contact&nbsp;Method" value="email"> Email</label>
+                            <label><input type="checkbox" name="contact-method" value="phone"> Phone</label>
+                            <label><input type="checkbox" name="contact-method" value="email"> Email</label>
                         </div>
                     </div>
                     
                     <div class="form-row">
                         <label for="ma-lives" class="question-label">How many attributed Medicare Advantage (MA) lives do you currently support in value-based care (VBC) contracts?</label>
-                        <input type="number" id="ma-lives" name="MA&nbsp;Lives">
+                        <input type="number" id="ma-lives" name="ma-lives">
                     </div>
                     
                     <div class="form-row">
                         <div>
                             <label for="ehr">What is your primary ambulatory EHR?</label>
-                            <select id="ehr" name="EHR">
+                            <select id="ehr" name="ehr">
                                 <option value="" disabled selected>Select an EHR</option>
                                 <option value="ehr1">Epic</option>
                                 <option value="ehr2">Cerner Millenium</option>
@@ -258,13 +252,13 @@
                     <div class="form-row">
                         <div>
                             <label for="message">Message</label>
-                            <textarea id="message" name="Message" rows="4"></textarea>
+                            <textarea id="message" name="message" rows="4"></textarea>
                         </div>
                     </div>          
                     <div class="button-wrapper">
                         <button type="submit" class="request-demo-button">Request a Demo</button>
                     </div>
-                </form>  
+                </form>   
             </div>
         </section>
     </main>
