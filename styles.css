@@ -143,8 +143,6 @@
             margin-top: 10px;
             border-radius: 0;
         }
-       .sidebar li {
-          padding: 60px;
     }
 
     @media (max-width: 400px) {
@@ -216,5 +214,6 @@
         max-width: 50px;
         max-height: 50px;
     }
+
 
 
