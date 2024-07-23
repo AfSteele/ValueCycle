@@ -6,11 +6,7 @@
     <title>Value Cycle</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+       
         
         .demo-header {
             text-align: center;
@@ -85,6 +81,7 @@
             padding: 10px;
             border-radius: 4px;
             border: 1px solid #ccc;
+            font-family: inter;
             box-sizing: border-box;
         }
     
@@ -167,6 +164,8 @@
                 margin: 20px 0;
             }
         }
+
+
     </style>
 </head>
 <body>
@@ -194,18 +193,21 @@
             </div>
             <div class="text-box">
                 <h1 class="demo-header">Request a Demo</h1>
-                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-                    <input type="hidden" name="access_key" value="">
-                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
-                    
+                <form action="https://formsubmit.co/40de78dcb0160c6e797d5d3b6dde96a6" method="POST" class="contact-form">
+                   <!--Honey Pot-->
+                    <input type="text" name="_honey" style="display: none;">
+                    <!--Disable Captcha-->
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <input type="hidden" name="_next" value="https://afsteele.github.io/ValueCycle/success.html">
                     <div class="form-row">
                         <div>
                             <label for="first-name">First Name*</label>
-                            <input type="text" id="first-name" name="first-name" required>
+                            <input type="text" id="first-name" name="First&nbsp;Name" required>
                         </div>
                         <div>
                             <label for="last-name">Last Name*</label>
-                            <input type="text" id="last-name" name="last-name" required>
+                            <input type="text" id="last-name" name="Last&nbsp;Name" required>
                         </div>
                     </div>
                     
@@ -215,31 +217,31 @@
                     <div class="form-row">
                         <div>
                             <label for="email">Email*</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="Email" required>
                         </div>
                         <div>
                             <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="phone">
+                            <input type="tel" id="phone" name="Phone">
                         </div>
                     </div>
                     
                     <div class="preferred-contact">
                         <p>Preferred contact method:</p>
                         <div class="checkbox-group">
-                            <label><input type="checkbox" name="contact-method" value="phone"> Phone</label>
-                            <label><input type="checkbox" name="contact-method" value="email"> Email</label>
+                            <label><input type="checkbox" name="Contact&nbsp;Method" value="phone"> Phone</label>
+                            <label><input type="checkbox" name="Contact&nbsp;Method" value="email"> Email</label>
                         </div>
                     </div>
                     
                     <div class="form-row">
                         <label for="ma-lives" class="question-label">How many attributed Medicare Advantage (MA) lives do you currently support in value-based care (VBC) contracts?</label>
-                        <input type="number" id="ma-lives" name="ma-lives">
+                        <input type="number" id="ma-lives" name="MA&nbsp;Lives">
                     </div>
                     
                     <div class="form-row">
                         <div>
                             <label for="ehr">What is your primary ambulatory EHR?</label>
-                            <select id="ehr" name="ehr">
+                            <select id="ehr" name="EHR">
                                 <option value="" disabled selected>Select an EHR</option>
                                 <option value="ehr1">Epic</option>
                                 <option value="ehr2">Cerner Millenium</option>
@@ -256,19 +258,22 @@
                     <div class="form-row">
                         <div>
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="4"></textarea>
+                            <textarea id="message" name="Message" rows="4"></textarea>
                         </div>
                     </div>          
                     <div class="button-wrapper">
                         <button type="submit" class="request-demo-button">Request a Demo</button>
                     </div>
-                </form>   
+                </form>  
             </div>
         </section>
     </main>
     <footer>
         <a href="privacy.html" class="blue-title">Privacy Policy</a>
         <p>&copy; 2024 ValueCycle. All rights reserved.</p>
+        <a href="https://www.linkedin.com/company/valuecycle/" target="_blank">
+            <img class="linkedin-logo" src="assets/linkedin-logo.png" alt="LinkedIn Logo" class="linkedin-logo">
+          </a>
     </footer>
     <script src="app.js"></script>
 </body>
