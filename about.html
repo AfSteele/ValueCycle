@@ -12,10 +12,6 @@
             padding: 0;
         }
 
-        p {
-            margin: 0;
-        }
-
         .three-section-layout {
             display: flex;
             justify-content: space-between;
@@ -46,12 +42,14 @@
             margin: 20px;
         }
         
+    
         .ceo-section {
             display: flex;
             flex-direction: column;
             align-items: center; 
             margin-bottom: 20px;
         }
+
 
         .ceo-section img {
             width: 250px; 
@@ -84,10 +82,10 @@
         .right-section {
             padding: 20px;
             background: #ffffff;
-            min-height: 300px; /* Adjust height based on expected content */
+            min-height: 300px; 
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Keep space between content and bottom */
+            justify-content: space-between; 
         }
 
         .right-section .placeholder {
@@ -95,7 +93,7 @@
             align-items: center;
             justify-content: center;
             padding: 90px;
-            height: 100%; /* Ensure the placeholder takes up the full height */
+            height: 100%; 
             color: #999;
             font-style: italic;
             text-align: center;
@@ -171,8 +169,8 @@
             <div class="middle-section">
                 <div class="ceo-section">
                     <img src="assets/tom.png" alt="Tom Hawkes">
-                    <p><b>Tom Hawkes</b></p>
-                    <p>CEO, ValueCycle</p>
+                    <p class="CEO"><b>Tom Hawkes</b></p>
+                    <p class="CEO">CEO, ValueCycle</p>
                 </div>
                 <div class="company-images">
                     <img src="assets/company1.png" alt="Abundant Venture Partners">
@@ -194,6 +192,9 @@
     <footer>
         <a href="privacy.html" class="blue-title">Privacy Policy</a>
         <p>&copy; 2024 ValueCycle. All rights reserved.</p>
+        <a href="https://www.linkedin.com/company/valuecycle/" target="_blank">
+            <img class="linkedin-logo" src="assets/linkedin-logo.png" alt="LinkedIn Logo" class="linkedin-logo">
+          </a>
     </footer>
     <script src="app.js"></script>
 </body>
