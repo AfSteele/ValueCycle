@@ -174,11 +174,22 @@
                 margin-bottom: 10px;
             }
 
-              .checkbox-group {
-                align-items: flex-start;
-                flex-direction: column; /* Stack checkboxes vertically on small screens */
-                gap: 10px; /* Reduce space between checkboxes */
-            }
+             .checkbox-group {
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .checkbox-group label {
+        display: flex;
+        align-items: center; /* Vertically align text with checkboxes */
+        gap: 5px; /* Space between checkbox and label text */
+        width: 100%; /* Ensure labels take up the full width of the container */
+        box-sizing: border-box; /* Include padding and border in element's total width and height */
+    }
+
+    .checkbox-group input[type="checkbox"] {
+        margin-right: 10px; /* Space between checkbox and label text */
+    }
+}
 
         }
     </style>
