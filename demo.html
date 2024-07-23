@@ -147,39 +147,33 @@
             background-color: #0056b3;
         }
 
-       @media (max-width: 1000px) {
-    .arrow-text-section {
-        flex-direction: column;
-    }
+        @media (max-width: 1000px) {
+            .arrow-text-section {
+                flex-direction: column;
+            }
 
-    .arrow-container {
-        display: none;
-    }
+            .arrow-container{
+                display: none;
+            }
 
-    .arrow-container, .text-box {
-        max-width: 80%;
-    }
+            .arrow-container, .text-box {
+                max-width: 80%;
+            }
 
-    .text-box {
-        margin: 20px 0;
-    }
+            .text-box {
+                margin: 20px 0;
+            }
 
-    .preferred-contact {
-        flex-direction: column; /* Changed from colum to column */
-        align-items: flex-start; /* Align items to start */
-    }
+            .preferred-contact {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
-    .preferred-contact p {
-        margin-bottom: 10px;
-    }
+            .preferred-contact p {
+                margin-bottom: 10px;
+            }
 
-    .checkbox-group {
-        align-items: left;
-        flex-direction: column; /* Stack options vertically */
-         gap: 10px; /* Space between options */
-    }
-}
-
+        }
     </style>
 </head>
 <body>
@@ -238,8 +232,8 @@
                     <div class="preferred-contact">
                         <p>Preferred contact method:</p>
                         <div class="checkbox-group">
-                            <label><input type="checkbox" name="contact-method" value="phone"> Phone</label>
-                            <label><input type="checkbox" name="contact-method" value="email"> Email</label>
+                            <label><input type="checkbox" name="contact-method" value="phone">Phone</label>
+                            <label><input type="checkbox" name="contact-method" value="email">Email</label>
                         </div>
                     </div>
                     
@@ -260,11 +254,15 @@
                                 <option value="ehr5">Allscripts</option>
                                 <option value="ehr6">Meditech</option>
                                 <option value="ehr7">eCW</option>
-                                <option value="ehr8">Other (Let us know in the message!)</option>
                             </select>
                         </div>
                     </div>
-                    
+                    <div class="form-row">
+                        <div>
+                            <label for="Other">Other</label>
+                            <textarea id="message" name="ehr" rows="1"></textarea>
+                        </div>
+                    </div>      
                     <div class="form-row">
                         <div>
                             <label for="message">Message</label>
@@ -288,3 +286,4 @@
     <script src="app.js"></script>
 </body>
 </html>
+
