@@ -110,16 +110,22 @@
             margin-right: 20px;
         }
 
-        .checkbox-group {
+        ..checkbox-group {
             display: flex;
-            align-items: center;
-            gap: 20px;
+            flex-direction: column; /* Stack checkboxes vertically */
+            gap: 10px; /* Space between checkboxes */
         }
-
+        
         .checkbox-group label {
             display: flex;
-            align-items: center;
-            gap: 5px;
+            align-items: center; /* Vertically align checkbox and text */
+            gap: 5px; /* Space between checkbox and text */
+            width: 100%; /* Ensure labels are full-width for consistency */
+            box-sizing: border-box; /* Include padding and borders in width */
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 5px; /* Space between checkbox and label text */
         }
 
         .contact-form .question-label {
@@ -176,8 +182,6 @@
 
             .checkbox-group {
                 align-items: flex-start;
-                flex-direction: column; /* Stack checkboxes vertically on small screens */
-                gap: 10px; /* Reduce space between checkboxes */
             }
 
         }
@@ -241,7 +245,7 @@
                         <p>Preferred contact method:</p>
                         <div class="checkbox-group">
                             <label><input type="checkbox" name="contact-method" value="phone">Phone</label>
-                            <label><input type="checkbox" name="contact-method" value="email"> Email</label>
+                            <label><input type="checkbox" name="contact-method" value="email">Email</label>
                         </div>
                     </div>
                     
