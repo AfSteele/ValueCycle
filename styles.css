@@ -144,7 +144,7 @@
             border-radius: 0;
         }
        .sidebar li {
-          padding: 20px;
+          padding: 60px;
     }
 
     @media (max-width: 400px) {
