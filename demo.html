@@ -111,17 +111,17 @@
         }
 
         .checkbox-group {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
+    display: flex;
+    flex-direction: column; /* Stack checkboxes vertically */
+    gap: 10px; /* Space between checkboxes */
+}
 
-        .checkbox-group label {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
+.checkbox-group label {
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    display: flex; /* Ensure checkbox and text are aligned */
+    align-items: center; /* Center align checkbox and text */
+}
         .contact-form .question-label {
             margin-bottom: 10px;
             text-align: left;
