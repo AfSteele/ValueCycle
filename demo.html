@@ -107,20 +107,21 @@
 
         .preferred-contact p {
             margin: 0;
+            margin-right: 20px;
         }
 
         .checkbox-group {
-    display: flex;
-    flex-direction: column; /* Stack checkboxes vertically */
-    gap: 10px; /* Space between checkboxes */
-}
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
-.checkbox-group label {
-    margin: 0; /* Remove any default margin */
-    padding: 0; /* Remove any default padding */
-    display: flex; /* Ensure checkbox and text are aligned */
-    align-items: center; /* Center align checkbox and text */
-}
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
         .contact-form .question-label {
             margin-bottom: 10px;
             text-align: left;
@@ -163,38 +164,14 @@
                 margin: 20px 0;
             }
 
-            @media (max-width: 1000px) {
-    .arrow-text-section {
-        flex-direction: column;
-    }
+            .preferred-contact {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
-    .arrow-container {
-        display: none;
-    }
-
-    .arrow-container, .text-box {
-        max-width: 80%;
-    }
-
-    .text-box {
-        margin: 20px 0;
-    }
-
-    .preferred-contact {
-        flex-direction: column; /* Changed from colum to column */
-        align-items: flex-start; /* Align items to start */
-    }
-
-    .preferred-contact p {
-        margin-bottom: 10px;
-    }
-
-    .checkbox-group {
-        flex-direction: column; /* Stack options vertically */
-        gap: 10px; /* Space between options */
-    }
-}
-
+            .preferred-contact p {
+                margin-bottom: 10px;
+            }
             
         }
     </style>
