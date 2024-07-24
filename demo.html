@@ -65,6 +65,10 @@
             gap: 20px;
         }
     
+        .contact-form .form-row.email-phone-row {
+            padding-top: 20px; /* Add padding above the email and phone section */
+        }
+
         .contact-form .form-row > div {
             flex: 1 1 48%;
         }
@@ -228,7 +232,7 @@
                     <label for="title">Title</label>
                     <input type="text" id="title" name="title">
                     
-                    <div class="form-row">
+                    <div class="form-row email-phone-row">
                         <div>
                             <label for="email">Email*</label>
                             <input type="email" id="email" name="email" required>
@@ -238,6 +242,7 @@
                             <input type="tel" id="phone" name="phone">
                         </div>
                     </div>
+                    
                     
                     <div class="preferred-contact">
                         <p>Preferred contact method:</p>
