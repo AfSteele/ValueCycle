@@ -139,8 +139,6 @@
         }
         .menu-button {
             display: block;
-            padding: 20px;  /* Increased padding */
-            font-size: 18px; /* Increased font size */
         }
         nav a {
             padding: 20px; /* Increased padding for mobile */
