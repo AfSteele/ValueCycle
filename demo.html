@@ -99,35 +99,6 @@
             background-color: #0056b3;
         }
 
-        .preferred-contact {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .preferred-contact p {
-            margin: 0;
-            margin-right: 20px;
-        }
-
-        ..checkbox-group {
-            display: flex;
-            flex-direction: column; /* Stack checkboxes vertically */
-            gap: 10px; /* Space between checkboxes */
-        }
-        
-        .checkbox-group label {
-            display: flex;
-            align-items: center; /* Vertically align checkbox and text */
-            gap: 5px; /* Space between checkbox and text */
-            width: 100%; /* Ensure labels are full-width for consistency */
-            box-sizing: border-box; /* Include padding and borders in width */
-        }
-        
-        .checkbox-group input[type="checkbox"] {
-            margin-right: 5px; /* Space between checkbox and label text */
-        }
-
         .contact-form .question-label {
             margin-bottom: 10px;
             text-align: left;
@@ -153,12 +124,38 @@
             background-color: #0056b3;
         }
 
+        .preferred-contact {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .preferred-contact p {
+            margin: 0;
+            margin-right: 20px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            gap: 20px; /* Space between checkboxes */
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center; /* Vertically align checkbox and text */
+            gap: 5px; /* Space between checkbox and text */
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 5px; /* Space between checkbox and label text */
+        }
+
         @media (max-width: 1000px) {
             .arrow-text-section {
                 flex-direction: column;
             }
 
-            .arrow-container{
+            .arrow-container {
                 display: none;
             }
 
@@ -170,7 +167,6 @@
                 margin: 20px 0;
             }
 
-            
             .preferred-contact {
                 flex-direction: column;
                 align-items: flex-start;
@@ -181,10 +177,12 @@
             }
 
             .checkbox-group {
+                flex-direction: column;
                 align-items: flex-start;
             }
-
         }
+
+
    
     </style>
 </head>
